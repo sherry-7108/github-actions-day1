@@ -1,4 +1,4 @@
-name: "Node.js CI pipeline"
+name: "Building a Dcoker Image with CI"
 
 on:
  push:
@@ -23,6 +23,9 @@ jobs:
 
    - name: Run tests
      run: npm test
+
+   - name: Build docker image
+     run: docker Build -t my-node-app:latest .
 
      
    
