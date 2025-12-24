@@ -1,15 +1,19 @@
-name: DAY-1 CI workflow
+name: "Node.js CI pipeline"
 
 on:
  push:
+  branches:
+   - main
 
 jobs:
- demo-job:
+ build:
   runs-on: ubuntu-latest
 
   steps:
    - name: Checkout code
      uses: actions/checkout@v4
 
-   - name: Run echo command
-     run: echo "This is my first pipeline"
+   - name: Setup Node.js
+     uses: 
+   
+
